@@ -1,0 +1,179 @@
+example-1
+-----------------------
+package First;
+import java.util.*;
+public class Collection1
+{
+	public static void main(String[] args)
+	{
+		Scanner ob=new Scanner(System.in);
+		int a[]=new int[5];
+		System.out.println("Enter 5 nos");
+		for(int i=0;i<5;i++)
+			a[i]=ob.nextInt();
+		System.out.println("5 nos are");
+		for(int i=0;i<5;i++)
+			System.out.println(a[i]);
+
+	}
+}
+
+-----------------------------------------------------------------
+Collection :-
+--------------------
+Array is a collection of similar data type and it is fixed.
+But in collection we can store objects .
+The size of the collection increases when we add object to it and decreses when we delete object from it.
+It is dynamic.
+Using collection we can search data,sort the data,insert ,manipulate,delete
+------------------------------
+Set interface:-TreeSet,HashSet,LinkedHashSet
+List interface:-ArrayList,Stack,Vector,LinkedList
+Map interface:-
+Queue interface:-
+Deque interface:-
+-----------------------------------------------------------------------
+Set:- In set we cannot insert duplicate records
+TreeSet :- It displays the data in shorted order.
+package First;
+import java.util.*;
+public class TreeSetDemo 
+{
+public static void main(String[] args)
+{
+TreeSet<Integer> ts=new TreeSet<Integer>();
+ts.add(10);
+ts.add(40);
+ts.add(30);
+ts.add(20);
+ts.add(10);
+System.out.println(ts);
+}
+}
+---------------------------------------------------------------------------------------
+HashSet :- It will display the data in random order.
+package First;
+import java.util.*;
+public class TreeSetDemo 
+{
+public static void main(String[] args)
+{
+	HashSet<Integer> ts=new HashSet<Integer>();
+ts.add(10);
+ts.add(40);
+ts.add(30);
+ts.add(20);
+ts.add(10);
+System.out.println(ts);
+}
+}
+---------------------------------------------
+LinkedHashSet :- It will display the data in the same order.
+
+package First;
+import java.util.*;
+public class TreeSetDemo 
+{
+public static void main(String[] args)
+{
+	LinkedHashSet<Integer> ts=new LinkedHashSet<Integer>();
+ts.add(10);
+ts.add(40);
+ts.add(30);
+ts.add(20);
+ts.add(10);
+System.out.println(ts);
+}
+}
+-----------------------------------------------------------------------------------------
+List :- In this we can enter duplicate data.
+ArrayList :-It will display in the same order in which we have entered.
+package First;
+import java.util.*;
+public class TreeSetDemo 
+{
+public static void main(String[] args)
+{
+	ArrayList<String> ar=new ArrayList<String>();
+	ar.add("Apple");
+	ar.add("Mango");
+	ar.add("Grapes");
+	ar.add("Mango");
+	ar.add("Banana");
+	System.out.println(ar);
+	
+	Iterator itr=ar.iterator();
+	while(itr.hasNext())
+	{
+		System.out.println(itr.next());
+	}
+	}
+}
+
+---------------------------------------------------------------------------
+package First;
+import java.util.*;
+public class TreeSetDemo 
+{
+public static void main(String[] args)
+{
+	ArrayList<String> ar=new ArrayList<String>();
+	ar.add("Apple");
+	ar.add("Mango");
+	ar.add("Grapes");
+	ar.add("Mango");
+	ar.add("Banana");
+//for each loop
+	for(String fruit:ar)
+		System.out.println(fruit);
+	System.out.println("****************************");
+	Iterator itr=ar.iterator();
+	while(itr.hasNext())
+	{
+		System.out.println(itr.next());
+	}
+	}
+}
+-------------------------------------------------------------------------------------------------------
+example 1:-
+---------------------
+package First;
+
+public class Emp 
+{
+int id;
+String name,address;
+public Emp(int id, String name, String address) 
+{
+	this.id = id;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Emp [id=" + id + ", name=" + name + ", address=" + address + "]";
+}
+
+}
+--------------------------------------------------------------------
+package First;
+import java.util.*;
+public class LinkedListDemo 
+{
+	public static void main(String[] args)
+	{
+LinkedList<Emp> ls=new LinkedList<Emp>();
+Emp ob1=new Emp(101,"sandip","Bangalore");
+Emp ob2=new Emp(102,"sunil","Bangalore");
+Emp ob3=new Emp(103,"kiran","Bangalore");
+ls.add(ob1);
+ls.add(ob2);
+ls.add(ob3);
+System.out.println(ls);
+}
+}
+---------------------------------------------------------------------------------------------------
+
+
+
+ 
