@@ -37,3 +37,29 @@ update studentshruti set address='hydrabad' where name='kiran';
 
 9)to delete the data
 delete studentshruti where name='kiran';
+
+-----------------------------------------------------------------------------------------------------------
+drop table shruti;
+
+create table shruti(id number,name varchar2(30),password varchar2(30),email varchar2(30),country varchar2(30));
+
+insert into shruti values(102,'sandip','1234','sandip@gmail.com','India');
+
+select * from shruti;
+
+update shruti set country='UK',email='madhu@gmail.com' where id=101;
+
+delete from  shruti where id=101;
+
+alter table shruti add biology number;
+alter table shruti add chemistry number;
+alter table shruti add maths number;
+alter table shruti add total number;
+alter table shruti add average number;
+
+update shruti set biology=78,chemistry=72,maths=67 where id=102;
+
+update shruti set total=biology+chemistry+maths where id=102;
+update shruti set average=total/3 where id=102;
+update shruti set average=round(total/3,2) where id=102;
+-----------------------------------------------------------------------------------
